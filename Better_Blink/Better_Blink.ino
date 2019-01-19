@@ -21,7 +21,7 @@ void loop() {
   
   /*READ INPUTS*/
   currentTime = millis();   //number of milliseconds since the program started running
-  if (M5.wasPressed()) {
+  if (M5.BtnA.wasPressed()) {
     ledOnOrOff = !ledOnOrOff;
   }
 
