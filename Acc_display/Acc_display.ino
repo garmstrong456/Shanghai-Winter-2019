@@ -1,5 +1,5 @@
 #include <M5Stack.h>
-#include "utility/MPU9250"
+#include "utility/MPU9250.h"
 #include "Math.h"
 
 MPU9250 IMU;
