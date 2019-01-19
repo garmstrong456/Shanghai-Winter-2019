@@ -4,6 +4,8 @@
 
 MPU9250 IMU;
 
+float acc_magnitude = 0;
+
 void setup() {
   M5.begin();
 
@@ -37,5 +39,15 @@ void loop() {
   M5.Lcd.print(IMU.ay);
   M5.Lcd.setCursor(10,70);
   M5.Lcd.print(IMU.az);
+
+  acc_magnitude = sqrt(sq(IMU.ax) + sq(IMU.ay) + sq(IMU.az));
+
+  if (acc_magnitude < 0.3) {
+    M5.Lcd.fillScreen(RED);
+  } else if (acc_magnitude > 1.5) {
+    M5.Lcd.fillScreen(BLUE);
+  } else {
+    M5.Lcd.fillScreen(BLACK);
+  }
 
 }
