@@ -10,6 +10,6 @@ void setup() {
 }
 
 void loop() {
-  brightness = analogRead(LIGHT_SENSOR)/4;
+  brightness = analogRead(LIGHT_SENSOR)/8;
   M5.Lcd.setBrightness(brightness);
 }
